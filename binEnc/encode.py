@@ -9,6 +9,8 @@ with open("../testData.txt", "br") as f:
     bits = bitarray()
     bits.fromfile(f)
 
+bits.extend("0"*16)
+
 
 def process_value(index, value):
     if index >= len(bits):
